@@ -67,7 +67,7 @@ const usePomodoro = () => {
     setSecondsLeft(initialSeconds);
   };
 
-  return { secondsLeft, pomodoroCount, currentSession, setIsRunning, setCurrentSession, setIsBreak, setSecondsLeft, start, pause, reset };
+  return { secondsLeft, pomodoroCount, currentSession, isRunning, setIsRunning, setCurrentSession, setIsBreak, setSecondsLeft, start, pause, reset };
 };
 
 export default usePomodoro;

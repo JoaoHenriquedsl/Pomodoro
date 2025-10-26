@@ -7,7 +7,7 @@ import SessionSelector from './components/SessionCounter/SessionSelector';
 function App() {
   const [timerMinutes, setTimerMinutes] = useState<string>();
   const [timerSeconds, setTimerSeconds] = useState<string>();
-  const { secondsLeft, pomodoroCount, currentSession, setSecondsLeft, setCurrentSession, start, pause, reset } = usePomodoro();
+  const { secondsLeft, pomodoroCount, currentSession, isRunning, setSecondsLeft, setCurrentSession, start, pause, reset } = usePomodoro();
 
   useEffect(() => {
     setTimerMinutes((Math.floor(secondsLeft / 60)).toString().padStart(2, '0'));
@@ -34,7 +34,7 @@ function App() {
           <span className="sessionCount">{pomodoroCount} / 4</span>
         </div>
         <div>
-          <span onClick={() => setSecondsLeft(0)} id="skip">SKIP</span>
+          {isRunning && <span onClick={() => setSecondsLeft(0)} id="skip">SKIP</span>}
         </div>
       </div>
     </>
