@@ -24,7 +24,7 @@ function App() {
             currentSession={currentSession} 
             setCurrentSession={setCurrentSession} 
           />
-          <div>
+          <div className='clock-container'>
             <span className="clock">{timerMinutes}:</span>
             <span className="clock">{timerSeconds}</span>
           </div>

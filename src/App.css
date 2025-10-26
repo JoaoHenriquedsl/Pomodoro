@@ -78,8 +78,14 @@
     text-align: center;
   }
 
+  .clock-container{
+    margin: 1rem 0;
+  }
+
   #app {
-    height: 100vh;
+    height: 100%;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
   }
 }
