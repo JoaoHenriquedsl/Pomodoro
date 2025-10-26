@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# 🍅 Pomodoro Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Maximize sua produtividade com a técnica Pomodoro
 
-Currently, two official plugins are available:
+<div align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Pomodoro](https://img.shields.io/badge/Pomodoro-Technique-red?style=for-the-badge&logo=timer)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5-purple?style=for-the-badge&logo=vite)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Sobre o Projeto
 
-## Expanding the ESLint configuration
+Um timer Pomodoro moderno e elegante construído com React, TypeScript e Vite. A técnica Pomodoro é um método de gerenciamento de tempo que usa intervalos de trabalho focado seguidos por pausas curtas para maximizar a produtividade.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎯 Como Funciona
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **25 minutos** de trabalho focado
+- **5 minutos** de pausa curta
+- A cada 4 pomodoros, **15** de pausa longa
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 📊 Contador de pomodoros completados
+- 🎨 Interface moderna e responsiva
+- 📱 Totalmente responsivo
+
+## 🛠️ Tecnologias
+
+- **React 18** - Biblioteca para interfaces
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool moderna
+- **CSS3** - Estilização avançada
+
+## 📦 Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/pomodoro-timer.git
+
+# Entre no diretório
+cd pomodoro-timer
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 Como Usar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Inicie o timer** clicando no botão play
+2. **Trabalhe focado** durante os 25 minutos
+3. **Faça uma pausa** quando o timer tocar
+4. **Repita o ciclo** para maximizar sua produtividade
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📱 Screenshots
+
+<div align="center">
+
+| Timer Ativo | Pausa | Estatísticas |
+|-------------|-------|--------------|
+| ![Timer](https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Timer+Ativo) | ![Pausa](https://via.placeholder.com/300x200/4ecdc4/ffffff?text=Pausa) | ![Stats](https://via.placeholder.com/300x200/45b7d1/ffffff?text=Estatísticas) |
+
+</div>
+
+
+</div>
