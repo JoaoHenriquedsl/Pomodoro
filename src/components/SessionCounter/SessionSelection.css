@@ -1,0 +1,35 @@
+#sessionSelector {
+  display: flex;
+  justify-content: center;
+  gap: 12.48px;
+  padding: 0.31rem;
+  transition: 0.5s all;
+}
+
+.btn-container {
+  display: flex;
+  gap: 0.78rem;
+  transition: 0.5s all;
+  padding: 0.78rem;
+  border-radius: 0.78rem;
+}
+
+#sessionSelector button {
+  border-radius: 0.78rem;
+  border: none;
+  padding: 1.09rem 1.87rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.1s all;
+  background-color: transparent;
+  color: white;
+  font-size: 1.56rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}

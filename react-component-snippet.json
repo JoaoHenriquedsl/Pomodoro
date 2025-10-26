@@ -1,0 +1,15 @@
+{
+  "React Component Template": {
+    "prefix": "rfc",
+    "body": [
+      "import { useState } from 'react';",
+      "",
+      "const ${1:component} = () => {",
+      "    return ${2:null};",
+      "};",
+      "",
+      "export default ${1:component};"
+    ],
+    "description": "React functional component with useState import"
+  }
+}

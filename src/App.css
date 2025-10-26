@@ -1,0 +1,85 @@
+#app {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1.56rem;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  left: 50%;
+  padding: 10rem 1.56rem;
+  transform: translateX(-50%);
+  transition: 0.5s all;
+}
+
+.clock {
+  font-size: 7.8rem;
+  color: white;
+  font-weight: 900;
+}
+
+.pomodoro {
+  background-color: #ba4949;
+}
+
+.pomodoro .btn-container {
+  background-color: #f17981;
+}
+
+.pomodoro #pomodoro {
+  color: #ba4949;
+  background-color: white;
+}
+
+.short {
+  background-color: #38858a;
+}
+
+.short .btn-container {
+  background-color: #327c81;
+}
+
+.short #short {
+  color: #38858a;
+  background-color: white;
+}
+
+.long {
+  background-color: #397097;
+}
+
+.long .btn-container {
+  background-color: #356485;
+}
+
+.long #long {
+  color: #397097;
+  background-color: white;
+}
+
+.sessionCount {
+  font-size: 2.34rem;
+  color: white;
+  font-weight: 900;
+}
+
+#skip {
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 1rem 5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .clock {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+  #app {
+    height: 100vh;
+    padding: 1rem;
+  }
+}
