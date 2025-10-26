@@ -57,15 +57,14 @@ npm run dev
 3. **Faça uma pausa** quando o timer tocar
 4. **Repita o ciclo** para maximizar sua produtividade
 
-## 📱 Screenshots
+## 📱 Preview
 
 <div align="center">
 
-| Timer Ativo | Pausa | Estatísticas |
-|-------------|-------|--------------|
-| ![Timer](https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Timer+Ativo) | ![Pausa](https://via.placeholder.com/300x200/4ecdc4/ffffff?text=Pausa) | ![Stats](https://via.placeholder.com/300x200/45b7d1/ffffff?text=Estatísticas) |
+![Pomodoro Timer Preview](.github/screenshot.png)
+
+*Interface moderna e intuitiva do Pomodoro Timer*
 
 </div>
-
 
 </div>
