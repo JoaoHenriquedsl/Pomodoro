@@ -1,5 +1,6 @@
-import useSettings from '../../hooks/useSettings';
 import './SessionSelection.css';
+import { SettingsContext } from '../../context/SettingsContext';
+import { useContext } from 'react';
 
 interface ControlProps {
   pause: (state: string) => void;
@@ -9,7 +10,8 @@ interface ControlProps {
 }
 
 const SessionSelector = ({ pause, setSecondsLeft, currentSession, setCurrentSession }: ControlProps) => {
-  const { initialSeconds, shortSeconds, longSeconds } = useSettings();
+  const { settings } = useContext(SettingsContext)
+  const { initialSeconds, shortSeconds, longSeconds } = settings
 
   const handleChange = (seconds: number, section: string = 'pomodoro') => {
     setSecondsLeft(seconds);

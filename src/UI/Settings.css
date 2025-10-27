@@ -1,0 +1,98 @@
+#settings-cover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 8, 8, 0.363);
+    height: 100vh;
+    width: 100vw;
+    z-index: 777;
+}
+
+#settings-container {
+    background-color: white;
+    padding: 1rem 2.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+form h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: #4b4b4b;
+    margin-top: 1rem;
+}
+
+.icons {
+    font-size: 1.5rem;
+}
+
+form h1 {
+    margin: 1rem 0 0 0;
+}
+
+form button {
+    margin: 0 0 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #BA4949;
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+    cursor: pointer;
+    transition: .5 all;
+}
+
+form button:active {
+    transform: translateY(1px);
+    transition: .5 all;
+}
+
+form label {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+form input {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: .6rem;
+    background-color: #aaaaaa2d;
+    outline: none;
+    color: #555;
+    font-weight: 900;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}

@@ -1,9 +1,12 @@
-const useSettings = () => {
-  const initialSeconds = 1500;
-  const shortSeconds = 300;
-  const longSeconds = 900;
+import { useState } from "react";
 
-  return { initialSeconds, shortSeconds, longSeconds };
+const useSettings = () => {
+  const [initialSeconds, setInitialSeconds] = useState(1500);
+  const [shortSeconds, setShortSeconds] = useState(300);
+  const [longSeconds, setLongSeconds] = useState(900);
+  const [sessions, setSessions] = useState(4)
+
+  return { initialSeconds, setInitialSeconds, shortSeconds, setShortSeconds, longSeconds, setLongSeconds, sessions, setSessions };
 };
 
 export default useSettings;

@@ -6,9 +6,7 @@
   width: 100%;
   height: 100vh;
   text-align: center;
-  left: 50%;
   padding: 10rem 1.56rem;
-  transform: translateX(-50%);
   transition: 0.5s all;
 }
 
@@ -18,47 +16,79 @@
   font-weight: 900;
 }
 
-.panel{
+.panel {
   width: 100%;
+}
+
+#settings {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  background-color: white;
+  padding: .7rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  gap: .3rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,.7);  
+  cursor: pointer;
+}
+
+#settings:disabled{
+  background-color: #746e6e;
+  color: white;
+}
+
+.others {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .pomodoro {
   background-color: #ba4949;
-}
-
-.pomodoro .btn-container {
-  background-color: #f17981;
-}
-
-.pomodoro #pomodoro {
   color: #ba4949;
-  background-color: white;
+  transition: 0.5s all;
+
+  .btn-container {
+    background-color: #f17981;
+  }
+
+  #pomodoro {
+    color: #ba4949;
+    background-color: white;
+  }
 }
 
 .short {
   background-color: #38858a;
-}
-
-.short .btn-container {
-  background-color: #327c81;
-}
-
-.short #short {
   color: #38858a;
-  background-color: white;
+  transition: 0.5s all;
+
+  .btn-container {
+    background-color: #327c81;
+  }
+
+  #short {
+    color: #38858a;
+    background-color: white;
+  }
 }
 
 .long {
   background-color: #397097;
-}
-
-.long .btn-container {
-  background-color: #356485;
-}
-
-.long #long {
   color: #397097;
-  background-color: white;
+  transition: 0.5s all;
+
+  .btn-container {
+    background-color: #356485;
+  }
+
+  #long {
+    color: #397097;
+    background-color: white;
+  }
 }
 
 .sessionCount {
@@ -82,8 +112,12 @@
     text-align: center;
   }
 
-  .clock-container{
+  .clock-container {
     margin: 1rem 0;
+  }
+
+  #settings{
+    font-size: 1.3rem;
   }
 
   #app {

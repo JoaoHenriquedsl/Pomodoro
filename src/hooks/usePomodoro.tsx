@@ -1,9 +1,10 @@
-import { useEffect, useState, useCallback } from 'react';
-import useSettings from './useSettings';
+import { useEffect, useState, useCallback, useContext } from 'react';
+import { SettingsContext } from '../context/SettingsContext';
 
 const usePomodoro = () => {
-  const { initialSeconds, shortSeconds, longSeconds } = useSettings();
-  const [secondsLeft, setSecondsLeft] = useState(initialSeconds);
+  const { settings } = useContext(SettingsContext);
+  const { initialSeconds, shortSeconds, longSeconds, sessions } = settings;
+  const [secondsLeft, setSecondsLeft] = useState<number>(initialSeconds);
   const [pomodoroCount, setPomodoroCount] = useState(0);
   const [currentSession, setCurrentSession] = useState('pomodoro');
   const [isBreak, setIsBreak] = useState(false);
@@ -12,12 +13,17 @@ const usePomodoro = () => {
   useEffect(() => {
     if (!isRunning) return;
     const intervalId = setInterval(() => setSecondsLeft(prev => prev - 1), 1000);
+
     return () => clearInterval(intervalId);
   }, [isRunning]);
 
+  useEffect(() => {
+    setSecondsLeft(initialSeconds);
+  }, [initialSeconds, sessions]);
+
   const handleTimerComplete = useCallback(() => {
     if (currentSession === 'pomodoro') {
-      if (pomodoroCount < 4) {
+      if (pomodoroCount < sessions) {
         setSecondsLeft(shortSeconds);
         setCurrentSession('short');
       } else {
@@ -39,7 +45,7 @@ const usePomodoro = () => {
   useEffect(() => {
     if (secondsLeft <= 0) {
       handleTimerComplete();
-      if (currentSession === 'pomodoro' && pomodoroCount < 4) setPomodoroCount(prevCount => prevCount + 1);
+      if (currentSession === 'pomodoro' && pomodoroCount < sessions) setPomodoroCount(prevCount => prevCount + 1);
     }
   }, [secondsLeft, handleTimerComplete]);
 
